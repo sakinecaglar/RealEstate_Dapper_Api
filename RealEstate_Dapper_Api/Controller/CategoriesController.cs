@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using RealEstate_Dapper_Api.Dtos.CategoryDtos;
 using RealEstate_Dapper_Api.Repositories.CategoryRepository;
 
-namespace RealEstate_Dapper_Api.Controllers
+namespace RealEstate_Dapper_Api.Controller
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -22,7 +22,7 @@ namespace RealEstate_Dapper_Api.Controllers
             return Ok(values);
         }
         [HttpPost]
-        public async Task<IActionResult>CreateCategory(CreateCategoryDto createCategoryDto)
+        public async Task<IActionResult> CreateCategory(CreateCategoryDto createCategoryDto)
         {
             _categoryRepository.CreateCategory(createCategoryDto);
             return Ok("Kategory Başşarılı bir şekilde Eklendi");
@@ -49,3 +49,4 @@ namespace RealEstate_Dapper_Api.Controllers
 }
 
        
+
